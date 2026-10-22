@@ -20,7 +20,7 @@ html, body {
   font-family: 'Poppins', sans-serif;
   color: #fff;
   background:
-    radial-gradient(ellipse at 50% 45%,
+    radial-gradient(ellipse at center,
     rgba(212,175,55,.16), transparent 70%),
     #080808;
 }
@@ -41,7 +41,7 @@ body {
   border: 1px solid rgba(212,175,55,.55);
   border-radius: 28px;
   box-shadow: 0 25px 70px rgba(0,0,0,.8),
-              0 0 35px rgba(212,175,55,.10);
+              0 0 35px rgba(212,175,55,.12);
   animation: fadeIn .6s ease;
 }
 
@@ -184,12 +184,6 @@ body {
   border: 1px solid rgba(212,175,55,.3);
 }
 
-.countdown {
-  color: rgba(255,255,255,.65);
-  font-size: 12px;
-  margin: 16px 0;
-}
-
 .cta {
   display: flex;
   align-items: center;
@@ -300,9 +294,8 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
-    animation-duration: .01ms !important;
-    animation-iteration-count: 1 !important;
-    scroll-behavior: auto !important;
+    animation: none !important;
+    transition: none !important;
   }
 }
 </style>
@@ -313,26 +306,32 @@ body {
 <main class="card">
 
   <section class="left">
-    <div class="agency">GAUTAM KUMAR JHA</div>
+
+    <div class="agency">
+      GAUTAM KUMAR JHA
+    </div>
 
     <div class="badge">
       ✔ GAUTAM KUMAR JHA • PUBLIC CHANNEL
     </div>
 
+    <!-- PROFILE PHOTO / LOGO -->
     <div class="avatar">
       <div class="ring"></div>
+
       <div class="logo-inner">
         <img
           src="profile.jpg"
-          alt="Gautam Kumar Jha profile photo"
-          onerror="this.style.display='none'; this.parentElement.style.background='#222';"
+          alt="Gautam Kumar Jha"
         >
       </div>
     </div>
 
     <h1 class="name">GAUTAM KUMAR JHA ✔️</h1>
 
-    <div class="trusted">WELCOME TO MY CHANNEL</div>
+    <div class="trusted">
+      WELCOME TO MY CHANNEL
+    </div>
 
     <div class="chart" aria-hidden="true">
       <div class="candle"></div>
@@ -343,9 +342,11 @@ body {
       <div class="candle"></div>
       <div class="candle"></div>
     </div>
+
   </section>
 
   <section class="right">
+
     <div class="features">
       <div class="feat">✔ PUBLIC CHANNEL</div>
       <div class="feat">✔ TELEGRAM COMMUNITY</div>
@@ -366,15 +367,18 @@ body {
     </div>
 
     <div class="manage">
-      CHANNEL NAME: <span>GAUTAM KUMAR JHA</span>
+      CHANNEL NAME:
+      <span>GAUTAM KUMAR JHA</span>
     </div>
 
     <hr class="divider">
 
     <p class="disclaimer">
-      Please review channel content independently before relying on
-      any information shared. No results or returns are guaranteed.
+      Please review channel content independently before
+      relying on any information shared. No results or
+      returns are guaranteed.
     </p>
+
   </section>
 
 </main>
